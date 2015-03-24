@@ -82,7 +82,7 @@ if __name__ == '__main__':
 	lmclient= actionlib.SimpleActionClient('/detect_muffin', DetectMuffinAction)
 	lmclient.wait_for_server(rospy.Duration.from_sec(2.0))
 
-	piclient= actionlib.SimpleActionClient('/calvin_pick_server', PickServerAction)
+	piclient= actionlib.SimpleActionClient('/calvin_pick_and_store', PickServerAction)
 	piclient.wait_for_server(rospy.Duration.from_sec(2.0))
 
 	rospy.loginfo("move arm out of the way")
