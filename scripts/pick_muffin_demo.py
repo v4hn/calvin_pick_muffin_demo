@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
 	rospy.loginfo("detect muffin")
 	lmclient.send_goal(DetectMuffinGoal(min_muffin_dim= .01, max_muffin_dim= .13))
-	lmclient.wait_for_result(rospy.Duration.from_sec(10.0))
+	lmclient.wait_for_result()
 
 	muffins= lmclient.get_result().muffin
 	if len(muffins) == 0:
