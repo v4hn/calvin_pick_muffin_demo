@@ -2,7 +2,7 @@
 <launch>
 	<include file="$(find calvin_moveit_config)/launch/move_group.launch"/>
 
-	<node name="tabletop_segmentation_server" pkg="curious_table_explorer" type="tabletop_segmentation_server.py" output="screen"/>
+	<node name="tabletop_segmentation_server" pkg="curious_table_explorer" type="tabletop_segmentation.py" output="screen"/>
 	<node name="detect_muffin_server" pkg="muffin_rgbd_object_recognition" type="detect_muffin_server" output="screen"/>
 
 	<node name="pick_server" pkg="calvin_pick_server" type="calvin_pick_server" output="screen"/>
